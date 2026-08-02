@@ -1,0 +1,1464 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 60px 0 0 0;
+  width: 100%;
+  max-width: 100%;
+  background: #ffffff;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   CABEÇALHO — DESKTOP
+   ========================================================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+  background: #ffffff;
+}
+
+.logo {
+  width: 90px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-left: 26px;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.main-nav a {
+  color: #EC008C;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #00AEEF;
+}
+
+.language-switch {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.language-switch a {
+  color: #EC008C;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.language-switch span {
+  color: #999999;
+  font-size: 12px;
+}
+
+.language-switch a:hover {
+  color: #00AEEF;
+}
+
+
+/* =========================================================
+   SEÇÕES GERAIS
+   ========================================================= */
+
+.site-section {
+  width: 100%;
+  min-height: 100vh;
+  scroll-margin-top: 60px;
+}
+
+.video-placeholder,
+.hero-video {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+  background: #ffffff;
+}
+
+.hero-video {
+  object-fit: contain;
+}
+
+.video-placeholder {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.section-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+  padding: 100px 120px;
+}
+
+.section-content h2 {
+  margin: 0 0 24px;
+  color: #00AEEF;
+  font-size: clamp(40px, 7vw, 100px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.section-content p {
+  max-width: 700px;
+  margin: 0 0 24px;
+  color: #4d4d4d !important;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   PRODUTOS
+   ========================================================= */
+
+.products-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 70px;
+}
+
+.product-card {
+  min-width: 0;
+  width: 100%;
+}
+
+.product-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.product-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.product-card h3 {
+  margin: 24px 0 6px;
+  color: #00AEEF;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.product-size {
+  display: block;
+  margin-bottom: 14px;
+  color: #777777;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.product-card p {
+  max-width: none;
+  margin: 0;
+  color: #4d4d4d !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.product-tip {
+  width: 100%;
+  background: #EC008C;
+  color: #ffffff;
+}
+
+.product-tip-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+  padding: 40px 120px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.product-tip-content strong {
+  flex-shrink: 0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.product-tip-content span {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   PLACEHOLDERS
+   ========================================================= */
+
+.photo-placeholder,
+.downloads-placeholder,
+.support-placeholder,
+.links-placeholder {
+  width: 100%;
+  min-height: 300px;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eeeeee;
+  color: #777777;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.site-footer {
+  padding: 60px 120px;
+  color: #333333;
+  border-top: 1px solid #dddddd;
+}
+
+.site-footer p {
+  margin: 0 0 20px;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.footer-links a,
+.footer-links span {
+  color: #777777;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.footer-links a:hover {
+  color: #EC008C;
+}
+
+
+/* =========================================================
+   GIRO GROOVE DD
+   NÃO ALTERAR
+   ========================================================= */
+
+.dd-wide-image {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.dd-wide-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.dd-content {
+  padding-top: 100px;
+}
+
+.dd-text {
+  width: 100%;
+}
+
+.dd-text p {
+  max-width: 700px;
+  margin: 0 0 24px;
+  color: #4d4d4d !important;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.dd-text .dd-highlight {
+  margin-top: 40px;
+  margin-bottom: 32px;
+  color: #00AEEF !important;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+
+/* =========================================================
+   GIRO GROOVE DIY
+   ========================================================= */
+
+.diy-content {
+  padding-bottom: 110px;
+}
+
+.diy-text {
+  width: 100%;
+  margin-top: 55px;
+}
+
+.diy-text p {
+  max-width: 700px;
+  margin: 0 0 24px;
+  color: #4d4d4d !important;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.diy-actions {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+/* =========================================================
+   BOTÕES PRINCIPAIS DIY
+   ========================================================= */
+
+.diy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 14px 22px;
+  background: #EC008C;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.diy-button:hover {
+  background: #00AEEF;
+}
+
+
+/* =========================================================
+   ÁREA DE APOIO
+   ========================================================= */
+
+.diy-support {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 90px;
+}
+
+.diy-support h3,
+.diy-license h3 {
+  margin: 0 0 20px;
+  color: #00AEEF;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.diy-support p,
+.diy-license p {
+  max-width: 700px;
+  margin: 0 0 24px;
+  color: #4d4d4d !important;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   PIX + PAYPAL
+   ========================================================= */
+
+.diy-donation {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.donation-item {
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.donation-item strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #EC008C;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PIX
+   ========================================================= */
+
+.pix-copy {
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  max-width: 100%;
+  margin-top: 18px;
+}
+
+.pix-copy span {
+  min-width: 0;
+  max-width: 280px;
+  padding: 14px;
+  background: #eeeeee;
+  color: #555555;
+  font-size: 13px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.pix-copy button {
+  flex-shrink: 0;
+  min-height: 52px;
+  height: 52px;
+  padding: 14px 22px;
+  border: 0;
+  background: #EC008C;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.pix-copy button:hover {
+  background: #00AEEF;
+}
+
+
+/* =========================================================
+   PAYPAL
+   ========================================================= */
+
+.diy-paypal-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  min-width: 0;
+  height: 52px;
+  min-height: 52px;
+  margin-top: 18px;
+  padding: 14px 22px;
+  background: #EC008C;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  border: 0;
+  border-radius: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.diy-paypal-button:hover {
+  background: #00AEEF;
+}
+
+
+/* =========================================================
+   LICENÇA
+   ========================================================= */
+
+.diy-license {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 90px;
+  padding-top: 50px;
+  border-top: 1px solid #dddddd;
+}
+
+.diy-license-link {
+  display: inline-block;
+  color: #EC008C;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.diy-license-link:hover {
+  color: #00AEEF;
+}
+
+
+/* =========================================================
+   GIRO MERCH
+   ========================================================= */
+
+.merch-section {
+  background: #EC008C;
+  color: #ffffff;
+}
+
+.merch-section .section-content {
+  color: #ffffff;
+}
+
+.merch-section h2 {
+  color: #ffffff;
+}
+
+.merch-section > .section-content > p {
+  color: #ffffff !important;
+}
+
+
+/* TEXTO DO GIRO MERCH SEMPRE BRANCO */
+
+.merch-section p {
+  color: #ffffff !important;
+}
+
+.merch-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 70px;
+}
+
+.merch-card {
+  min-width: 0;
+  width: 100%;
+}
+
+.merch-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #EC008C;
+}
+
+.merch-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.merch-card h3 {
+  margin: 24px 0 0;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+
+/* =========================================================
+   LOJA E CONTATO
+   ========================================================= */
+
+.contact-section {
+  background: #00AEEF;
+  color: #ffffff;
+}
+
+.contact-section .section-content {
+  color: #ffffff;
+}
+
+.contact-section h2 {
+  color: #ffffff;
+}
+
+.contact-intro {
+  color: #ffffff !important;
+}
+
+.contact-list {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-icon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon img {
+  display: block;
+  width: auto;
+  height: 28px;
+  max-width: 30px;
+  object-fit: contain;
+}
+
+.contact-info {
+  min-width: 0;
+}
+
+.contact-info strong {
+  display: block;
+  margin: 0 0 7px;
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.contact-info a,
+.contact-info span {
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.contact-info a {
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-address {
+  display: block;
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.contact-address strong {
+  margin-bottom: 7px;
+  color: #ffffff !important;
+}
+
+
+/* =========================================================
+   LOJAS ONLINE
+   ========================================================= */
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.contact-links img {
+  display: block;
+  width: auto;
+  height: 30px;
+  max-width: none;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+.contact-links a:hover img {
+  opacity: 0.75;
+}
+
+
+/* =========================================================
+   AJUSTES FINAIS SOLICITADOS
+   ========================================================= */
+
+.loja-contato-section > .section-content > p {
+  color: #ffffff !important;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.physical-stores h3 {
+  color: #ffffff !important;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.physical-store strong {
+  color: #ffffff !important;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.physical-store p {
+  color: #ffffff !important;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ESTRELAS GIRO LIMPO
+   ========================================================= */
+
+.giro-stars {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.giro-star {
+  position: absolute;
+
+  background-color: #EC008C;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-position: center;
+  mask-position: center;
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
+
+  animation: giro-star-color 12s ease-in-out infinite alternate;
+}
+
+
+/* ESTRELA MAIOR */
+
+.giro-star-1 {
+  width: 180px;
+  height: 180px;
+
+  left: -90px;
+  top: 10%;
+
+  -webkit-mask-image: url("../img/estrela1.svg");
+  mask-image: url("../img/estrela1.svg");
+}
+
+
+/* ESTRELA MENOR */
+
+.giro-star-2 {
+  width: 90px;
+  height: 90px;
+
+  right: -45px;
+  top: 80%;
+
+  background-color: #00AEEF;
+
+  -webkit-mask-image: url("../img/estrela2.svg");
+  mask-image: url("../img/estrela2.svg");
+
+  animation-delay: -6s;
+}
+
+
+/* MAGENTA ⇄ CIANO */
+
+@keyframes giro-star-color {
+
+  0% {
+    background-color: #EC008C;
+  }
+
+  100% {
+    background-color: #00AEEF;
+  }
+
+}
+
+
+/* RESPEITA PREFERÊNCIA POR MENOS ANIMAÇÃO */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .giro-star {
+    animation: none;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — ATÉ 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .site-header {
+    padding: 0 40px;
+  }
+
+  .logo {
+    width: 75px;
+  }
+
+  .main-nav {
+    gap: 13px;
+    margin-left: 20px;
+  }
+
+  .main-nav a {
+    font-size: 12px;
+  }
+
+  .section-content {
+    padding: 80px 40px;
+  }
+
+  .products-grid {
+    gap: 25px;
+  }
+
+  .product-tip-content {
+    padding: 40px;
+  }
+
+  .site-footer {
+    padding: 60px 40px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   =========================================================
+
+   IMPORTANTE:
+
+   O TABLET CONTINUA COM O MESMO MENU HORIZONTAL
+   DO DESKTOP.
+
+   NÃO transformar em menu de duas linhas aqui.
+
+   A mudança para duas linhas acontece SOMENTE
+   no MOBILE, abaixo de 600px.
+
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  body {
+    padding-top: 60px;
+  }
+
+  .site-header {
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-left {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .logo {
+    width: 65px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-left: 20px;
+    width: auto;
+    height: auto;
+    padding: 0;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    white-space: nowrap;
+    overflow: visible;
+  }
+
+  .main-nav a {
+    font-size: 12px;
+    line-height: 1;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .language-switch {
+    position: static;
+    margin-left: auto;
+    height: auto;
+  }
+
+  .site-section {
+    scroll-margin-top: 60px;
+  }
+
+  .video-placeholder,
+  .hero-video {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  .section-content {
+    padding: 70px 30px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 25px;
+  }
+
+  .site-footer {
+    padding: 50px 30px;
+  }
+
+  .diy-donation {
+    gap: 30px;
+  }
+
+
+  /* =========================================================
+     ESTRELAS — TABLET
+
+     ALTERE SOMENTE ESTES DOIS VALORES.
+
+     ESTRELA 1 = maior
+     ESTRELA 2 = menor
+
+     Quanto MAIOR o percentual,
+     mais para BAIXO a estrela ficará.
+
+     EXEMPLO:
+
+     top: 20%;
+     top: 60%;
+
+     ========================================================= */
+
+  .giro-star-1 {
+    top: 8%; /* ← ALTERE AQUI A ALTURA DA ESTRELA MAIOR */
+  }
+
+  .giro-star-2 {
+    top: 56%; /* ← ALTERE AQUI A ALTURA DA ESTRELA MENOR */
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   NÃO ALTERAR A DISPOSIÇÃO
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  body {
+    padding-top: 98px;
+  }
+
+  .site-header {
+    height: 98px;
+    padding: 0 18px;
+    display: block;
+  }
+
+  .header-left {
+    width: 100%;
+    height: 98px;
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    grid-template-rows: 44px 54px;
+    column-gap: 14px;
+    align-items: center;
+  }
+
+  .logo {
+    width: 55px;
+    height: 30px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .language-switch {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    margin-left: 0;
+    height: auto;
+  }
+
+  .main-nav {
+    grid-column: 1 / 3;
+    grid-row: 2;
+
+    width: 100%;
+    height: 54px;
+
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 27px);
+
+    column-gap: 8px;
+    row-gap: 0;
+
+    align-items: center;
+
+    overflow: visible;
+    white-space: nowrap;
+  }
+
+  .main-nav a {
+    font-size: 11px;
+    line-height: 1.1;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .site-section {
+    scroll-margin-top: 98px;
+  }
+
+  .video-placeholder,
+  .hero-video {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  .section-content {
+    padding: 60px 18px;
+  }
+
+  .section-content h2 {
+    font-size: clamp(40px, 14vw, 70px);
+  }
+
+  .section-content p {
+    font-size: 16px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .product-tip-content {
+    padding: 35px 18px;
+    display: block;
+  }
+
+  .product-tip-content strong {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .product-tip-content span {
+    font-size: 16px;
+  }
+
+  .site-footer {
+    padding: 50px 18px;
+  }
+
+  .footer-links {
+    gap: 12px 18px;
+  }
+
+
+  /* =========================================================
+     GIRO GROOVE DD
+     ========================================================= */
+
+  .dd-content {
+    padding-top: 60px;
+  }
+
+  .dd-text p {
+    font-size: 16px;
+  }
+
+  .dd-text .dd-highlight {
+    font-size: 23px;
+  }
+
+
+  /* =========================================================
+     GIRO GROOVE DIY
+     ========================================================= */
+
+  .diy-content {
+    padding-bottom: 70px;
+  }
+
+  .diy-text {
+    margin-top: 40px;
+  }
+
+  .diy-text p {
+    font-size: 16px;
+  }
+
+  .diy-actions {
+    margin-top: 40px;
+  }
+
+  .diy-button {
+    width: 100%;
+    min-height: 52px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .diy-support {
+    margin-top: 65px;
+  }
+
+  .diy-support h3,
+  .diy-license h3 {
+    font-size: 25px;
+  }
+
+  .diy-support p,
+  .diy-license p {
+    font-size: 16px;
+  }
+
+
+  /* =========================================================
+     PIX + PAYPAL
+     ========================================================= */
+
+  .diy-donation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 45px;
+    margin-top: 30px;
+  }
+
+  .donation-item {
+    width: 100%;
+  }
+
+  .pix-copy {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+  }
+
+  .pix-copy span {
+    width: 100%;
+    max-width: none;
+    display: block;
+  }
+
+  .pix-copy button {
+    width: max-content;
+    align-self: flex-start;
+    min-height: 52px;
+    height: 52px;
+    padding: 14px 22px;
+    font-size: 16px;
+  }
+
+  .diy-paypal-button {
+    display: inline-flex;
+    width: max-content;
+    min-width: 0;
+    height: 52px;
+    min-height: 52px;
+    margin-top: 18px;
+    padding: 14px 22px;
+    font-size: 16px;
+    flex: 0 0 auto;
+  }
+
+
+  /* =========================================================
+     GIRO MERCH
+     ========================================================= */
+
+  .merch-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .merch-card h3 {
+    font-size: 23px;
+  }
+
+
+  /* =========================================================
+     LOJA E CONTATO
+     ========================================================= */
+
+  .contact-list {
+    margin-top: 45px;
+    gap: 30px;
+  }
+
+  .contact-item {
+    gap: 15px;
+  }
+
+  .contact-icon {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
+
+  .contact-icon img {
+    height: 26px;
+    max-width: 30px;
+  }
+
+  .contact-info strong {
+    font-size: 17px;
+    color: #ffffff !important;
+  }
+
+  .contact-info a,
+  .contact-info span {
+    font-size: 15px;
+    color: #ffffff !important;
+  }
+
+  .contact-address {
+    font-size: 15px;
+    color: #ffffff !important;
+  }
+
+  .contact-address strong {
+    color: #ffffff !important;
+  }
+
+
+  /* =========================================================
+     LOGOS DAS LOJAS ONLINE
+     ========================================================= */
+
+  .contact-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .contact-links a {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .contact-links img {
+    height: 30px;
+    width: auto;
+    max-width: none;
+  }
+
+
+  /* =========================================================
+     LOJAS FÍSICAS
+     ========================================================= */
+
+  .loja-contato-section > .section-content > p {
+    color: #ffffff !important;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .physical-stores h3 {
+    color: #ffffff !important;
+    font-size: 25px;
+    line-height: 1.1;
+  }
+
+  .physical-store strong {
+    color: #ffffff !important;
+    font-size: 17px;
+    line-height: 1.2;
+  }
+
+  .physical-store p {
+    color: #ffffff !important;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+
+  /* =========================================================
+     LICENÇA
+     ========================================================= */
+
+  .diy-license {
+    margin-top: 65px;
+    padding-top: 35px;
+  }
+
+
+  /* =========================================================
+     ESTRELAS — MOBILE
+     NÃO ALTERAR — JÁ ESTÁ CORRETO
+     ========================================================= */
+
+  .giro-star-1 {
+    width: 120px;
+    height: 120px;
+
+    left: -60px;
+    top: 12%;
+  }
+
+  .giro-star-2 {
+    width: 60px;
+    height: 60px;
+
+    right: -30px;
+    top: 38%;
+  }
+
+}
