@@ -6,1083 +6,1354 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Giro Limpo</title>
-    <meta name="description" content="Giro Limpo — vinil, produtos, limpeza ultrassônica e projetos.">
 
-    <link rel="stylesheet" href="css/style.css">
+<title>Giro Limpo</title>
+<meta name="description" content="Giro Limpo — vinil, produtos, limpeza ultrassônica e projetos.">
 
-    <style>
+<link rel="stylesheet" href="css/style.css">
 
-        /* =========================================================
-           GIRO MERCH
-           ========================================================= */
+<style>
 
-        .giro-merch-section {
-            background: #EC008C;
-            color: #ffffff;
-        }
+    /* =========================================================
+       GIRO MERCH
+       ========================================================= */
 
-        .giro-merch-section h2,
-        .giro-merch-section p,
-        .giro-merch-section .product-card h3 {
-            color: #ffffff !important;
-        }
+    .giro-merch-section {
+        background: #EC008C;
+        color: #ffffff;
+    }
+
+    .giro-merch-section h2,
+    .giro-merch-section p,
+    .giro-merch-section .product-card h3 {
+        color: #ffffff !important;
+    }
+
+    .giro-merch-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .giro-merch-section .product-photo {
+        background: transparent;
+    }
+
+
+    /* =========================================================
+       BOTÃO COMPRAR AGORA — PRODUTOS
+       ========================================================= */
+
+    .products-buy {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .products-buy-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 14px 34px;
+        background: #00AEEF;
+        color: #ffffff;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 1.3;
+        border: 0;
+        border-radius: 0;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+
+    .products-buy-button:hover {
+        background: #EC008C;
+    }
+
+
+    /* =========================================================
+       LOJA E CONTATO
+       ========================================================= */
+
+    .loja-contato-section {
+        background: #00AEEF;
+        color: #ffffff;
+    }
+
+    .loja-contato-section h2,
+    .loja-contato-section p,
+    .loja-contato-section h3,
+    .loja-contato-section strong {
+        color: #ffffff !important;
+    }
+
+
+    /* =========================================================
+       CONTATOS
+       ========================================================= */
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-top: 35px;
+    }
+
+    .contact-icon {
+        width: 34px;
+        height: 34px;
+        object-fit: contain;
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .contact-info strong {
+        font-size: 18px;
+        line-height: 1.1;
+    }
+
+    .contact-info a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .contact-info a:hover {
+        color: #EC008C;
+    }
+
+
+    /* =========================================================
+       LOJAS ONLINE
+       ========================================================= */
+
+    .contact-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+        margin-top: 55px;
+    }
+
+    .store-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        line-height: 0;
+    }
+
+    .store-icon {
+        width: auto;
+        height: 40px;
+        max-width: none;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+    }
+
+    .store-link:hover {
+        opacity: 0.75;
+    }
+
+    .store-link span {
+        display: none;
+    }
+
+
+    /* =========================================================
+       LOJAS FÍSICAS
+       ========================================================= */
+
+    .physical-stores {
+        margin-top: 65px;
+    }
+
+    .physical-stores h3 {
+        margin: 0 0 30px;
+        font-size: 30px;
+        line-height: 1.1;
+    }
+
+    .physical-store {
+        margin-bottom: 28px;
+    }
+
+    .physical-store strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+
+    .physical-store p {
+        margin: 0;
+        color: #ffffff !important;
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       REDES SOCIAIS
+       ========================================================= */
+
+    .social-links {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        margin-top: 55px;
+    }
+
+    .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+    }
+
+    .social-icon {
+        width: auto;
+        height: 32px;
+        max-width: 42px;
+        object-fit: contain;
+        display: block;
+    }
+
+    .social-links a:hover .social-icon {
+        opacity: 0.75;
+    }
+
+
+    /* =========================================================
+       PIX + PAYPAL
+       ========================================================= */
+
+    .diy-donation {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 40px;
+    }
+
+    .donation-item {
+        min-width: 0;
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pix-copy {
+        display: flex;
+        align-items: stretch;
+        width: max-content;
+        max-width: 100%;
+        margin-top: 18px;
+    }
+
+    .pix-copy button {
+        flex-shrink: 0;
+        min-height: 52px;
+        height: 52px;
+        padding: 14px 22px;
+        box-sizing: border-box;
+        border: 0;
+        background: #EC008C;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.3;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    .diy-paypal-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        min-width: 0;
+        height: 52px;
+        min-height: 52px;
+        margin-top: 18px;
+        padding: 14px 22px;
+        box-sizing: border-box;
+        background: #EC008C;
+        color: #ffffff;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.3;
+        border: 0;
+        border-radius: 0;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+
+    .pix-copy button:hover,
+    .diy-paypal-button:hover {
+        background: #00AEEF;
+    }
+
+
+    /* =========================================================
+       FORMULÁRIO TALLY
+       ========================================================= */
+
+    .lead-form {
+        width: 100%;
+        margin-top: 40px;
+        position: relative;
+        left: -5px;
+    }
+
+    .lead-form iframe {
+        display: block;
+        width: 100%;
+        min-height: 447px;
+        border: 0;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 600px) {
 
         .giro-merch-grid {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr;
+            gap: 50px;
         }
-
-        .giro-merch-section .product-photo {
-            background: transparent;
-        }
-
-
-        /* =========================================================
-           LOJA E CONTATO
-           ========================================================= */
-
-        .loja-contato-section {
-            background: #00AEEF;
-            color: #ffffff;
-        }
-
-        .loja-contato-section h2,
-        .loja-contato-section p,
-        .loja-contato-section h3,
-        .loja-contato-section strong {
-            color: #ffffff !important;
-        }
-
-
-        /* =========================================================
-           CONTATOS
-           ========================================================= */
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            margin-top: 35px;
-        }
-
-        .contact-icon {
-            width: 34px;
-            height: 34px;
-            object-fit: contain;
-            display: block;
-            flex-shrink: 0;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .contact-info strong {
-            font-size: 18px;
-            line-height: 1.1;
-        }
-
-        .contact-info a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .contact-info a:hover {
-            color: #EC008C;
-        }
-
-
-        /* =========================================================
-           LOJAS ONLINE
-           ========================================================= */
 
         .contact-links {
-            display: flex;
-            flex-wrap: wrap;
+            flex-direction: row;
             align-items: center;
-            gap: 30px;
-            margin-top: 55px;
-        }
-
-        .store-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            line-height: 0;
+            gap: 25px;
         }
 
         .store-icon {
-            width: auto;
             height: 40px;
             max-width: none;
-            object-fit: contain;
-            object-position: center;
-            display: block;
         }
-
-        .store-link:hover {
-            opacity: 0.75;
-        }
-
-        .store-link span {
-            display: none;
-        }
-
-
-        /* =========================================================
-           LOJAS FÍSICAS
-           ========================================================= */
-
-        .physical-stores {
-            margin-top: 65px;
-        }
-
-        .physical-stores h3 {
-            margin: 0 0 30px;
-            font-size: 30px;
-            line-height: 1.1;
-        }
-
-        .physical-store {
-            margin-bottom: 28px;
-        }
-
-        .physical-store strong {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 18px;
-        }
-
-        .physical-store p {
-            margin: 0;
-            color: #ffffff !important;
-            font-size: 17px;
-            line-height: 1.5;
-        }
-
-
-        /* =========================================================
-           REDES SOCIAIS
-           ========================================================= */
 
         .social-links {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            margin-top: 55px;
+            gap: 20px;
         }
 
         .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 42px;
-            height: 42px;
+            width: 38px;
+            height: 38px;
         }
 
         .social-icon {
-            width: auto;
-            height: 32px;
-            max-width: 42px;
-            object-fit: contain;
-            display: block;
+            height: 30px;
+            max-width: 38px;
         }
-
-        .social-links a:hover .social-icon {
-            opacity: 0.75;
-        }
-
-
-        /* =========================================================
-           PIX + PAYPAL
-           ========================================================= */
 
         .diy-donation {
             width: 100%;
             display: flex;
+            flex-direction: column;
             align-items: flex-start;
-            gap: 40px;
-            margin-top: 40px;
+            gap: 45px;
+            margin-top: 30px;
         }
 
         .donation-item {
-            min-width: 0;
-            flex: 0 0 auto;
-            display: flex;
-            flex-direction: column;
+            width: 100%;
         }
 
         .pix-copy {
+            width: 100%;
             display: flex;
-            align-items: stretch;
-            width: max-content;
-            max-width: 100%;
+            flex-direction: column;
             margin-top: 18px;
         }
 
+        .pix-copy span {
+            width: 100%;
+            max-width: none;
+            display: block;
+        }
+
         .pix-copy button {
-            flex-shrink: 0;
+            width: max-content;
+            align-self: flex-start;
             min-height: 52px;
             height: 52px;
             padding: 14px 22px;
-            box-sizing: border-box;
-            border: 0;
-            background: #EC008C;
-            color: #ffffff;
-            font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
-            font-weight: 700;
-            line-height: 1.3;
-            cursor: pointer;
-            white-space: nowrap;
         }
 
         .diy-paypal-button {
             display: inline-flex;
-            align-items: center;
-            justify-content: center;
             width: max-content;
             min-width: 0;
             height: 52px;
             min-height: 52px;
             margin-top: 18px;
             padding: 14px 22px;
-            box-sizing: border-box;
-            background: #EC008C;
-            color: #ffffff;
-            text-decoration: none;
-            font-family: Arial, Helvetica, sans-serif;
             font-size: 16px;
-            font-weight: 700;
-            line-height: 1.3;
-            border: 0;
-            border-radius: 0;
-            white-space: nowrap;
-            cursor: pointer;
-            transition: background 0.2s ease;
+            flex: 0 0 auto;
         }
 
-        .pix-copy button:hover,
-        .diy-paypal-button:hover {
-            background: #00AEEF;
+        .lead-form {
+            margin-top: 50px;
         }
 
-
-        /* =========================================================
-           RESPONSIVE
-           ========================================================= */
-
-        @media (max-width: 600px) {
-
-            .giro-merch-grid {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-
-            .contact-links {
-                flex-direction: row;
-                align-items: center;
-                gap: 25px;
-            }
-
-            .store-icon {
-                height: 40px;
-                max-width: none;
-            }
-
-            .social-links {
-                gap: 20px;
-            }
-
-            .social-links a {
-                width: 38px;
-                height: 38px;
-            }
-
-            .social-icon {
-                height: 30px;
-                max-width: 38px;
-            }
-
-
-            /* PIX + PAYPAL */
-
-            .diy-donation {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 45px;
-                margin-top: 30px;
-            }
-
-            .donation-item {
-                width: 100%;
-            }
-
-            .pix-copy {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                margin-top: 18px;
-            }
-
-            .pix-copy span {
-                width: 100%;
-                max-width: none;
-                display: block;
-            }
-
-            .pix-copy button {
-                width: max-content;
-                align-self: flex-start;
-                min-height: 52px;
-                height: 52px;
-                padding: 14px 22px;
-                font-size: 16px;
-            }
-
-            .diy-paypal-button {
-                display: inline-flex;
-                width: max-content;
-                min-width: 0;
-                height: 52px;
-                min-height: 52px;
-                margin-top: 18px;
-                padding: 14px 22px;
-                font-size: 16px;
-                flex: 0 0 auto;
-            }
-
+        .lead-form iframe {
+            min-height: 500px;
         }
 
-    </style>
+    }
+
+</style>
+
 
 </head>
 
+
 <body id="topo">
 
-    <!-- =========================================================
-         ESTRELAS FIXAS
-         ========================================================= -->
 
-    <div class="giro-stars" aria-hidden="true">
-        <div class="giro-star giro-star-1"></div>
-        <div class="giro-star giro-star-2"></div>
+<div class="giro-stars" aria-hidden="true">
+
+    <div class="giro-star giro-star-1"></div>
+
+    <div class="giro-star giro-star-2"></div>
+
+</div>
+
+
+<header class="site-header">
+
+
+<div class="header-left">
+
+    <a href="#topo" class="logo" aria-label="Giro Limpo">
+        <img src="img/logo.svg" alt="Giro Limpo">
+    </a>
+
+
+    <nav class="main-nav">
+
+        <a href="#produtos">Produtos</a>
+
+        <a href="#ultrassom">Ultrassom</a>
+
+        <a href="#giro-groove-dd">Giro Groove DD</a>
+
+        <a href="#giro-groove-diy">Giro Groove DIY</a>
+
+        <a href="#giro-merch">Giro Merch</a>
+
+        <a href="#loja-contato">Loja e Contato</a>
+
+    </nav>
+
+</div>
+
+
+<div class="language-switch">
+
+    <a href="faq.html" class="faq-link">FAQ</a>
+
+    <span class="header-separator"></span>
+
+    <a href="index.html">PT</a>
+
+    <span>|</span>
+
+    <a href="index-en.html">EN</a>
+
+</div>
+
+
+</header>
+
+
+<main>
+
+
+<section id="produtos" class="site-section">
+
+
+<a
+    href="https://www.youtube.com/watch?v=aGUyNHrdNh0"
+    target="_blank"
+    rel="noopener"
+    aria-label="Assistir O Ritual no YouTube"
+>
+
+    <video class="hero-video" autoplay muted playsinline loop>
+
+        <source src="videos/video01.mp4" type="video/mp4">
+
+    </video>
+
+</a>
+
+
+<div class="section-content">
+
+    <h2>Produtos</h2>
+
+    <p>
+        Produtos e cuidados para a limpeza e conservação dos seus discos de vinil.
+    </p>
+
+
+    <div class="products-grid">
+
+
+        <article class="product-card">
+
+            <div class="product-photo">
+
+                <img src="img/foto01.webp" alt="Limpa Discos">
+
+            </div>
+
+
+            <h3>Limpa Discos</h3>
+
+            <span class="product-size">100 ml e 250 ml</span>
+
+            <p>
+                Surfactante e emoliente que reduz a tensão na superfície
+                do vinil, facilitando sua penetração nos sulcos do disco
+                e a remoção da sujeira.
+            </p>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-photo">
+
+                <img src="img/foto02.webp" alt="Veda Selo">
+
+            </div>
+
+
+            <h3>Veda Selo</h3>
+
+            <p>
+                Acessório que protege e veda os selos mais delicados
+                durante a aplicação do Limpa Discos. O líquido não
+                danifica o selo, mas alguns discos antigos podem ter
+                selos mais sensíveis.
+            </p>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-photo">
+
+                <img src="img/foto03.webp" alt="Limpa Agulhas">
+
+            </div>
+
+
+            <h3>Limpa Agulhas</h3>
+
+            <span class="product-size">5 ml</span>
+
+            <p>
+                Ajuda a remover a sujeira acumulada e a conservar a
+                agulha, prolongando sua vida útil. Use antes da audição,
+                nunca imediatamente depois.
+            </p>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-photo">
+
+                <img src="img/foto04.webp" alt="Base de EVA">
+
+            </div>
+
+
+            <h3>Base de EVA</h3>
+
+            <p>
+                Base de apoio para a aplicação do produto, proporcionando
+                estabilidade durante a limpeza e ajudando no acabamento.
+            </p>
+
+        </article>
+
+
     </div>
 
 
-    <header class="site-header">
+    <div class="products-buy">
 
-        <div class="header-left">
+        <a href="#loja-contato" class="products-buy-button">
+            Comprar agora
+        </a>
 
-            <a href="#topo" class="logo" aria-label="Giro Limpo">
-                <img src="img/logo.svg" alt="Giro Limpo">
-            </a>
+    </div>
 
-            <nav class="main-nav">
 
-                <a href="#produtos">Produtos</a>
-                <a href="#ultrassom">Ultrassom</a>
-                <a href="#giro-groove-dd">Giro Groove DD</a>
-                <a href="#giro-groove-diy">Giro Groove DIY</a>
-                <a href="#giro-merch">Giro Merch</a>
-                <a href="#loja-contato">Loja e Contato</a>
+</div>
 
-            </nav>
 
-        </div>
+<div class="product-tip">
 
-        <div class="language-switch">
+    <div class="product-tip-content">
 
-            <a href="index.html">PT</a>
-            <span>|</span>
-            <a href="index-en.html">EN</a>
+        <strong>DICA IMPORTANTE</strong>
 
-        </div>
+        <span>
+            Use um pano de microfibra de qualidade para remover a sujeira.
+        </span>
 
-    </header>
+    </div>
 
+</div>
 
-    <main>
 
-        <section id="produtos" class="site-section">
+</section>
 
-            <a
-                href="https://www.youtube.com/watch?v=aGUyNHrdNh0"
-                target="_blank"
-                rel="noopener"
-                aria-label="Assistir O Ritual no YouTube"
-            >
-                <video class="hero-video" autoplay muted playsinline loop>
-                    <source src="videos/video01.mp4" type="video/mp4">
-                </video>
-            </a>
 
-            <div class="section-content">
+<section id="ultrassom" class="site-section">
 
-                <h2>Produtos</h2>
 
-                <p>
-                    Produtos e cuidados para a limpeza e conservação dos seus discos de vinil.
-                </p>
+<a
+    href="https://www.youtube.com/watch?v=cDzGgKzKHU4"
+    target="_blank"
+    rel="noopener"
+    aria-label="Assistir O Garimpo no YouTube"
+>
 
-                <div class="products-grid">
+    <video class="hero-video" autoplay muted playsinline loop>
 
-                    <article class="product-card">
+        <source src="videos/video02en.mp4" type="video/mp4">
 
-                        <div class="product-photo">
-                            <img src="img/foto01.webp" alt="Limpa Discos">
-                        </div>
+    </video>
 
-                        <h3>Limpa Discos</h3>
+</a>
 
-                        <span class="product-size">250 ml</span>
 
-                        <p>
-                            Surfactante e emoliente que reduz a tensão na superfície
-                            do vinil, facilitando sua penetração nos sulcos do disco
-                            e a remoção da sujeira.
-                        </p>
+<div class="section-content">
 
-                    </article>
+    <h2>Ultrassom</h2>
 
-                    <article class="product-card">
+    <p>
+        Uma limpeza profunda para quem quer ir além.
+    </p>
 
-                        <div class="product-photo">
-                            <img src="img/foto02.webp" alt="Veda Selo">
-                        </div>
+    <p>
+        As ondas ultrassônicas ajudam a desprender a sujeira acumulada
+        nos sulcos do vinil, alcançando áreas que a limpeza convencional
+        nem sempre consegue atingir.
+    </p>
 
-                        <h3>Veda Selo</h3>
+    <p>
+        Nosso processo utiliza água livre de impurezas, produzida por
+        osmose reversa, tratamento antifúngico e acabamento estético
+        cuidadoso. Cada disco recebe também um plástico interno novo,
+        completando o processo de limpeza e conservação.
+    </p>
 
-                        <p>
-                            Acessório que protege e veda os selos mais delicados
-                            durante a aplicação do Limpa Discos. O líquido não
-                            danifica o selo, mas alguns discos antigos podem ter
-                            selos mais sensíveis.
-                        </p>
+    <p>
+        Cada sessão dura entre <strong>30 e 60 minutos</strong>, de acordo
+        com a avaliação de cada lote. Nossa máquina permite lavar até
+        <strong>15 discos por vez</strong>, garantindo agilidade no
+        atendimento de lotes maiores para colecionadores e lojistas.
+    </p>
 
-                    </article>
+</div>
 
-                    <article class="product-card">
 
-                        <div class="product-photo">
-                            <img src="img/foto03.webp" alt="Limpa Agulhas">
-                        </div>
+<div class="product-tip">
 
-                        <h3>Limpa Agulhas</h3>
+    <div class="product-tip-content">
 
-                        <span class="product-size">5 ml</span>
+        <strong>QUANTIDADE MÍNIMA: 10 DISCOS POR LOTE</strong>
 
-                        <p>
-                            Ajuda a remover a sujeira acumulada e a conservar a
-                            agulha, prolongando sua vida útil. Use antes da audição,
-                            nunca imediatamente depois.
-                        </p>
+        <span>
+            Entre em contato pelo WhatsApp e faça seu agendamento.
+        </span>
 
-                    </article>
+    </div>
 
-                    <article class="product-card">
+</div>
 
-                        <div class="product-photo">
-                            <img src="img/foto04.webp" alt="Base de EVA">
-                        </div>
 
-                        <h3>Base de EVA</h3>
+</section>
 
-                        <p>
-                            Base de apoio para a aplicação do produto, proporcionando
-                            estabilidade durante a limpeza e ajudando no acabamento.
-                        </p>
 
-                    </article>
+<section id="giro-groove-dd" class="site-section">
 
-                </div>
 
-            </div>
+<a
+    href="COLE_AQUI_O_LINK_DO_VIDEO_03_NO_YOUTUBE"
+    target="_blank"
+    rel="noopener"
+    aria-label="Assistir O Groove no YouTube"
+>
 
-            <div class="product-tip">
+    <video class="hero-video" autoplay muted playsinline loop>
 
-                <div class="product-tip-content">
+        <source src="videos/video03.mp4" type="video/mp4">
 
-                    <strong>DICA IMPORTANTE</strong>
+    </video>
 
-                    <span>
-                        Use um pano de microfibra de qualidade para remover a sujeira.
-                    </span>
+</a>
 
-                </div>
 
-            </div>
+<div class="section-content">
 
-        </section>
+    <h2>Giro Groove DD</h2>
 
+    <p>
+        Toca-discos Direct Drive desenvolvido pela Giro Limpo.
+    </p>
 
-        <section id="ultrassom" class="site-section">
+</div>
 
-            <a
-                href="https://www.youtube.com/watch?v=cDzGgKzKHU4"
-                target="_blank"
-                rel="noopener"
-                aria-label="Assistir O Garimpo no YouTube"
-            >
-                <video class="hero-video" autoplay muted playsinline loop>
-                    <source src="videos/video02.mp4" type="video/mp4">
-                </video>
-            </a>
 
-            <div class="section-content">
+<div class="dd-wide-image">
 
-                <h2>Ultrassom</h2>
+    <img src="img/foto05.webp" alt="Giro Groove DD">
 
-                <p>
-                    Uma limpeza profunda para quem quer ir além.
-                </p>
+</div>
 
-                <p>
-                    As ondas ultrassônicas ajudam a desprender a sujeira acumulada
-                    nos sulcos do vinil, alcançando áreas que a limpeza convencional
-                    nem sempre consegue atingir.
-                </p>
 
-                <p>
-                    Nosso processo utiliza água livre de impurezas, produzida por
-                    osmose reversa, tratamento antifúngico e acabamento estético
-                    cuidadoso. Cada disco recebe também um plástico interno novo,
-                    completando o processo de limpeza e conservação.
-                </p>
+<div class="section-content dd-content">
 
-                <p>
-                    Cada sessão dura entre <strong>30 e 60 minutos</strong>, de acordo
-                    com a avaliação de cada lote. Nossa máquina permite lavar até
-                    <strong>15 discos por vez</strong>, garantindo agilidade no
-                    atendimento de lotes maiores para colecionadores e lojistas.
-                </p>
 
-            </div>
-
-            <div class="product-tip">
-
-                <div class="product-tip-content">
-
-                    <strong>QUANTIDADE MÍNIMA: 10 DISCOS POR LOTE</strong>
-
-                    <span>
-                        Entre em contato pelo WhatsApp e faça seu agendamento.
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section id="giro-groove-dd" class="site-section">
-
-            <a
-                href="COLE_AQUI_O_LINK_DO_VIDEO_03_NO_YOUTUBE"
-                target="_blank"
-                rel="noopener"
-                aria-label="Assistir O Groove no YouTube"
-            >
-                <video class="hero-video" autoplay muted playsinline loop>
-                    <source src="videos/video03.mp4" type="video/mp4">
-                </video>
-            </a>
-
-            <div class="section-content">
-
-                <h2>Giro Groove DD</h2>
-
-                <p>
-                    Toca-discos Direct Drive desenvolvido pela Giro Limpo.
-                </p>
-
-            </div>
-
-            <div class="dd-wide-image">
-
-                <img src="img/foto05.webp" alt="Giro Groove DD">
-
-            </div>
-
-            <div class="section-content dd-content">
-
-                <div class="dd-text">
-
-                    <p>
-                        O projeto Giro Groove nasceu de uma necessidade simples:
-                        criar toca-discos acessíveis para quem tem um orçamento
-                        limitado e que não danificassem os discos por excesso
-                        de peso da agulha.
-                    </p>
-
-                    <p>
-                        Desde o início, a proposta foi desenvolver projetos
-                        simples e leves, produzidos em impressão 3D, mas capazes
-                        de oferecer uma ótima qualidade de áudio. Para isso,
-                        utilizamos cápsulas de bom custo-benefício, fáceis de
-                        encontrar e substituir.
-                    </p>
-
-                    <p>
-                        O braço foi pensado para ser simples de usar e não exigir
-                        regulagens complexas. A pressão da agulha é de
-                        <strong>2,5 gramas</strong>, um peso ideal para extrair
-                        uma boa qualidade de áudio sem aplicar peso excessivo
-                        sobre o disco e, assim, evitar danos ao vinil.
-                    </p>
-
-                    <p>
-                        Depois de muitos protótipos Direct Drive de impressão 3D
-                        e de um modelo Belt Drive, que acabou se tornando um
-                        produto DIY comercial e agora está disponível aqui como
-                        projeto open source, chegamos a uma nova evolução.
-                    </p>
-
-                    <p class="dd-highlight">
-                        Dessa evolução nasceu o Giro Groove DD.
-                    </p>
-
-                    <p>
-                        Ele reúne a simplicidade e a leveza do braço dos projetos
-                        anteriores com a durabilidade e a praticidade de um motor
-                        Direct Drive, sem a necessidade de correia.
-                    </p>
-
-                    <p>
-                        Além do sistema Direct Drive, o Giro Groove DD possui
-                        <strong>saída Line</strong>, permitindo conectá-lo
-                        diretamente a uma caixa de som disponível em sua casa,
-                        sem a necessidade de equipamentos adicionais para essa
-                        conexão.
-                    </p>
-
-                    <p>
-                        Um toca-discos simples, acessível e pensado para quem
-                        quer ouvir seus discos sem complicação.
-                    </p>
-
-                    <p>
-                        <strong>
-                            O Giro Groove DD pode ser adquirido por encomenda via WhatsApp.
-                        </strong>
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section id="giro-groove-diy" class="site-section">
-
-            <div class="video-placeholder">
-
-                <img src="img/foto06.webp" alt="Giro Groove DIY">
-
-            </div>
-
-            <div class="section-content diy-content">
-
-                <h2>Giro Groove DIY</h2>
-
-                <p>
-                    Projeto de toca-discos DIY com arquivos disponibilizados gratuitamente.
-                </p>
-
-                <div class="diy-text">
-
-                    <p>
-                        Depois de muitos protótipos, testes e aprimoramentos, o
-                        Giro Groove de acionamento por correia (belt drive) chegou
-                        a uma versão que foi produzida e teve várias unidades
-                        vendidas.
-                    </p>
-
-                    <p>
-                        Agora, esse projeto está sendo disponibilizado gratuitamente
-                        para quem quiser montar seu próprio toca-discos em casa,
-                        para <strong>uso pessoal e não comercial</strong>.
-                    </p>
-
-                    <p>
-                        Por ser um projeto open source, você pode personalizar o
-                        seu Giro Groove como quiser: use adesivos, combine cores,
-                        experimente diferentes filamentos e crie uma versão que
-                        tenha a sua cara.
-                    </p>
-
-                    <p>
-                        Se montar o seu, compartilhe o resultado nas redes sociais
-                        e marque a <strong>Giro Limpo</strong>. Vamos adorar ver
-                        as diferentes versões do projeto por aí. Sempre que
-                        possível, dê os devidos créditos à Giro Limpo.
-                    </p>
-
-                </div>
-
-                <div class="diy-actions">
-
-                    <a href="#" class="diy-button" target="_blank" rel="noopener">
-                        Clique aqui para ver o tutorial no YouTube
-                    </a>
-
-                    <a href="#" class="diy-button" target="_blank" rel="noopener">
-                        Clique aqui para baixar os arquivos
-                    </a>
-
-                </div>
-
-                <div class="diy-support">
-
-                    <h3>Apoie o projeto</h3>
-
-                    <p>
-                        O Giro Groove DIY é gratuito. Se o projeto foi útil para
-                        você e quiser contribuir para que novos projetos continuem
-                        sendo desenvolvidos, qualquer doação é bem-vinda.
-                    </p>
-
-                    <div class="diy-donation">
-
-                        <div class="donation-item">
-
-                            <strong>PIX</strong>
-
-                            <p>
-                                Doe qualquer valor utilizando a chave PIX abaixo.
-                            </p>
-
-                            <div class="pix-copy">
-
-                                <span id="pix-key">
-                                    SUA-CHAVE-PIX-AQUI
-                                </span>
-
-                                <button type="button" onclick="copyPix()">
-                                    Copiar chave PIX
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                        <div class="donation-item">
-
-                            <strong>PayPal</strong>
-
-                            <p>
-                                Você também pode apoiar o projeto através do PayPal.
-                            </p>
-
-                            <a href="#" class="diy-paypal-button" target="_blank" rel="noopener">
-                                Doar pelo PayPal
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="diy-license">
-
-                    <h3>Licença</h3>
-
-                    <p>
-                        O Giro Groove DIY é disponibilizado sob uma licença
-                        <strong>Creative Commons</strong>, permitindo que você
-                        utilize, estude, modifique e compartilhe o projeto dentro
-                        das condições estabelecidas pela licença.
-                    </p>
-
-                    <p>
-                        O projeto é destinado a <strong>uso pessoal e não comercial</strong>.
-                        Consulte os termos completos da licença antes de utilizar,
-                        modificar ou redistribuir os arquivos.
-                    </p>
-
-                    <a
-                        href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt"
-                        class="diy-license-link"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        Ver licença Creative Commons
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section id="giro-merch" class="site-section giro-merch-section">
-
-            <div class="section-content">
-
-                <h2>Giro Merch</h2>
-
-                <p>
-                    Stickers, camisetas e edições limitadas em collab.
-                </p>
-
-                <div class="products-grid giro-merch-grid">
-
-                    <article class="product-card">
-
-                        <div class="product-photo">
-
-                            <img
-                                src="img/foto07.webp"
-                                alt="Sticker Meu Giro Minha Vida"
-                            >
-
-                        </div>
-
-                        <h3>
-                            Sticker<br>
-                            Meu Giro Minha Vida
-                        </h3>
-
-                    </article>
-
-                    <article class="product-card">
-
-                        <div class="product-photo">
-
-                            <img
-                                src="img/foto08.webp"
-                                alt="Sticker Eu S2 Vinil"
-                            >
-
-                        </div>
-
-                        <h3>
-                            Sticker<br>
-                            Eu S2 Vinil
-                        </h3>
-
-                    </article>
-
-                    <article class="product-card">
-
-                        <div class="product-photo">
-
-                            <img
-                                src="img/foto09.webp"
-                                alt="Camiseta Meu Giro Minha Vida"
-                            >
-
-                        </div>
-
-                        <h3>
-                            Camiseta<br>
-                            Meu Giro Minha Vida
-                        </h3>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section id="loja-contato" class="site-section loja-contato-section">
-
-            <div class="section-content">
-
-                <h2>Loja e Contato</h2>
-
-                <p>
-                    Onde encontrar a Giro Limpo e como entrar em contato.
-                </p>
-
-                <div class="contact-item">
-
-                    <img
-                        src="img/whatsapp.svg"
-                        alt="WhatsApp"
-                        class="contact-icon"
-                    >
-
-                    <div class="contact-info">
-
-                        <strong>WhatsApp</strong>
-
-                        <a
-                            href="https://wa.me/5562991513022"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            62 9 9151-3022
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="contact-item">
-
-                    <img
-                        src="img/email.svg"
-                        alt="Email"
-                        class="contact-icon"
-                    >
-
-                    <div class="contact-info">
-
-                        <strong>Email</strong>
-
-                        <a href="mailto:girolimpo@gmail.com">
-                            girolimpo@gmail.com
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="contact-links">
-
-                    <a href="#" class="store-link" target="_blank" rel="noopener" aria-label="Mercado Livre">
-
-                        <img
-                            src="img/mercadolivre.svg"
-                            alt="Mercado Livre"
-                            class="store-icon"
-                        >
-
-                    </a>
-
-                    <a href="#" class="store-link" target="_blank" rel="noopener" aria-label="Shopee">
-
-                        <img
-                            src="img/shopee.svg"
-                            alt="Shopee"
-                            class="store-icon"
-                        >
-
-                    </a>
-
-                    <a href="#" class="store-link" target="_blank" rel="noopener" aria-label="Nuvemshop">
-
-                        <img
-                            src="img/nuvemshop.svg"
-                            alt="Nuvemshop"
-                            class="store-icon"
-                        >
-
-                    </a>
-
-                </div>
-
-                <div class="physical-stores">
-
-                    <h3>Lojas parceiras</h3>
-
-                    <div class="physical-store">
-
-                        <strong>Fadiga | Bacural Discos</strong>
-
-                        <p>
-                            R. 7, 591 - Sl 2 - St. Central,
-                            Goiânia - GO, 74023-020
-                        </p>
-
-                    </div>
-
-                    <div class="physical-store">
-
-                        <strong>American Music</strong>
-
-                        <p>
-                            Av. T-10, QD 110 - LT 7 - St. Bueno,
-                            Goiânia - GO, 74223-060
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="social-links">
-
-                    <a href="#" target="_blank" rel="noopener">
-                        <img src="img/youtube.svg" alt="YouTube" class="social-icon">
-                    </a>
-
-                    <a href="#" target="_blank" rel="noopener">
-                        <img src="img/instagram.svg" alt="Instagram" class="social-icon">
-                    </a>
-
-                    <a href="#" target="_blank" rel="noopener">
-                        <img src="img/tiktok.svg" alt="TikTok" class="social-icon">
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <footer class="site-footer">
+    <div class="dd-text">
 
         <p>
-            © 2026 GIRO LIMPO. Todos os direitos reservados.
+            O projeto Giro Groove nasceu de uma necessidade simples:
+            criar toca-discos acessíveis para quem tem um orçamento
+            limitado e que não danificassem os discos por excesso de
+            peso da agulha.
         </p>
 
-        <div class="footer-links">
+        <p>
+            Desde o início, a proposta foi desenvolver projetos
+            simples e leves, produzidos em impressão 3D, mas capazes
+            de oferecer uma ótima qualidade de áudio. Para isso,
+            utilizamos cápsulas de bom custo-benefício, fáceis de
+            encontrar e substituir.
+        </p>
 
-            <a href="privacidade.html">Política de Privacidade</a>
-            <a href="cookies.html">Política de Cookies</a>
-            <a href="termos.html">Termos e Condições</a>
-            <a href="garantia.html">Garantia</a>
+        <p>
+            O braço foi pensado para ser simples de usar e não exigir
+            regulagens complexas. A pressão da agulha é de
+            <strong>2,5 gramas</strong>, um peso ideal para extrair
+            uma boa qualidade de áudio sem aplicar peso excessivo
+            sobre o disco e, assim, evitar danos ao vinil.
+        </p>
 
-            <span>Brasil</span>
+        <p>
+            Depois de muitos protótipos Direct Drive de impressão 3D
+            e de um modelo Belt Drive, que acabou se tornando um
+            produto DIY comercial e agora está disponível aqui como
+            projeto open source, chegamos a uma nova evolução.
+        </p>
+
+        <p class="dd-highlight">
+            Dessa evolução nasceu o Giro Groove DD.
+        </p>
+
+        <p>
+            Ele reúne a simplicidade e a leveza do braço dos projetos
+            anteriores com a durabilidade e a praticidade de um motor
+            Direct Drive, sem a necessidade de correia.
+        </p>
+
+        <p>
+            Além do sistema Direct Drive, o Giro Groove DD possui
+            <strong>saída Line</strong>, permitindo conectá-lo
+            diretamente a uma caixa de som disponível em sua casa,
+            sem a necessidade de equipamentos adicionais para essa
+            conexão.
+        </p>
+
+        <p>
+            Um toca-discos simples, acessível e pensado para quem
+            quer ouvir seus discos sem complicação.
+        </p>
+
+        <p>
+            <strong>
+                O Giro Groove DD pode ser adquirido por encomenda via WhatsApp.
+            </strong>
+        </p>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+
+<section id="giro-groove-diy" class="site-section">
+
+
+<div class="video-placeholder">
+
+    <img src="img/foto06.webp" alt="Giro Groove DIY">
+
+</div>
+
+
+<div class="section-content diy-content">
+
+    <h2>Giro Groove DIY</h2>
+
+    <p>
+        Projeto de toca-discos DIY com arquivos disponibilizados gratuitamente.
+    </p>
+
+
+    <div class="diy-text">
+
+        <p>
+            Depois de muitos protótipos, testes e aprimoramentos, o
+            Giro Groove de acionamento por correia (belt drive) chegou
+            a uma versão que foi produzida e teve várias unidades
+            vendidas.
+        </p>
+
+        <p>
+            Agora, esse projeto está sendo disponibilizado gratuitamente
+            para quem quiser montar seu próprio toca-discos em casa,
+            para <strong>uso pessoal e não comercial</strong>.
+        </p>
+
+        <p>
+            Por ser um projeto open source, você pode personalizar o
+            seu Giro Groove como quiser: use adesivos, combine cores,
+            experimente diferentes filamentos e crie uma versão que
+            tenha a sua cara.
+        </p>
+
+        <p>
+            Se montar o seu, compartilhe o resultado nas redes sociais
+            e marque a <strong>Giro Limpo</strong>. Vamos adorar ver as
+            diferentes versões do projeto por aí. Sempre que
+            possível, dê os devidos créditos à Giro Limpo.
+        </p>
+
+    </div>
+
+
+    <div class="diy-actions">
+
+        <a href="#" class="diy-button" target="_blank" rel="noopener">
+            Clique aqui para ver o tutorial no YouTube
+        </a>
+
+        <a href="https://drive.google.com/drive/folders/1CWrl63-kh4wR4cl6Xx1wsEmy1IgKBPVF?usp=sharing" class="diy-button" target="_blank" rel="noopener">
+            Clique aqui para baixar os arquivos
+        </a>
+
+    </div>
+
+
+    <div class="diy-support">
+
+        <h3>Apoie o projeto</h3>
+
+        <p>
+            O Giro Groove DIY é gratuito. Se o projeto foi útil para
+            você e quiser contribuir para que novos projetos continuem
+            sendo desenvolvidos, qualquer doação é bem-vinda.
+        </p>
+
+
+        <div class="diy-donation">
+
+
+            <div class="donation-item">
+
+                <strong>PIX</strong>
+
+                <p>
+                    Doe qualquer valor utilizando a chave PIX abaixo.
+                </p>
+
+
+                <div class="pix-copy">
+
+                    <span id="pix-key">
+                        62991513022
+                    </span>
+
+                    <button type="button" onclick="copyPix()">
+                        Copiar chave PIX
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="donation-item">
+
+                <strong>PayPal</strong>
+
+                <p>
+                    Você também pode apoiar o projeto através do PayPal.
+                </p>
+
+                <a href="#" class="diy-paypal-button" target="_blank" rel="noopener">
+                    Doar pelo PayPal
+                </a>
+
+            </div>
+
 
         </div>
 
-    </footer>
+    </div>
 
 
-    <script>
+    <div class="diy-license">
 
-        function copyPix() {
+        <h3>Licença</h3>
 
-            const pixKey = document.getElementById("pix-key").innerText;
+        <p>
+            O Giro Groove DIY é disponibilizado sob uma licença
+            <strong>Creative Commons</strong>, permitindo que você
+            utilize, estude, modifique e compartilhe o projeto dentro
+            das condições estabelecidas pela licença.
+        </p>
 
-            navigator.clipboard.writeText(pixKey).then(function() {
+        <p>
+            O projeto é destinado a <strong>uso pessoal e não comercial</strong>.
+            Consulte os termos completos da licença antes de utilizar,
+            modificar ou redistribuir os arquivos.
+        </p>
 
-                const button = document.querySelector(".pix-copy button");
+        <a
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt"
+            class="diy-license-link"
+            target="_blank"
+            rel="noopener"
+        >
+            Ver licença Creative Commons
+        </a>
 
-                const originalText = button.innerText;
+    </div>
 
-                button.innerText = "Chave copiada!";
 
-                setTimeout(function() {
+</div>
 
-                    button.innerText = originalText;
 
-                }, 2000);
+</section>
 
-            });
 
-        }
+<section id="giro-merch" class="site-section giro-merch-section">
 
-    </script>
+
+<div class="section-content">
+
+    <h2>Giro Merch</h2>
+
+    <p>
+        Stickers, camisetas e edições limitadas em collab.
+    </p>
+
+
+    <div class="products-grid giro-merch-grid">
+
+
+        <article class="product-card">
+
+            <div class="product-photo">
+
+                <img src="img/foto07.webp" alt="Sticker Meu Giro Minha Vida">
+
+            </div>
+
+            <h3>
+                Sticker<br>
+                Meu Giro Minha Vida
+            </h3>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-photo">
+
+                <img src="img/foto08.webp" alt="Sticker Eu S2 Vinil">
+
+            </div>
+
+            <h3>
+                Sticker<br>
+                Eu S2 Vinil
+            </h3>
+
+        </article>
+
+
+        <article class="product-card">
+
+            <div class="product-photo">
+
+                <img src="img/foto09.webp" alt="Camiseta Meu Giro Minha Vida">
+
+            </div>
+
+            <h3>
+                Camiseta<br>
+                Meu Giro Minha Vida
+            </h3>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+<section id="loja-contato" class="site-section loja-contato-section">
+
+
+<div class="section-content">
+
+    <h2>Loja e Contato</h2>
+
+    <p>
+        Onde encontrar a Giro Limpo e como entrar em contato.
+    </p>
+
+
+    <div class="online-stores">
+
+        <h3>Lojas Online</h3>
+
+
+        <div class="online-store-group">
+
+            <p class="store-description">
+                Produtos avulsos e Kits Giro Limpo em nossa loja oficial.
+            </p>
+
+
+            <div class="store-links">
+
+                <a
+                    href="https://girolimpo.lojavirtualnuvem.com.br/"
+                    class="store-link"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Nuvemshop"
+                >
+
+                    <img
+                        src="img/nuvemshop.svg"
+                        alt="Nuvemshop"
+                        class="store-icon"
+                    >
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="online-store-group online-store-group-marketplaces">
+
+            <p class="store-description">
+                Kits Giro Limpo nos principais marketplaces.
+            </p>
+
+
+            <div class="store-links">
+
+                <a
+                    href="#"
+                    class="store-link"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Mercado Livre"
+                >
+
+                    <img
+                        src="img/mercadolivre.svg"
+                        alt="Mercado Livre"
+                        class="store-icon"
+                    >
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="store-link"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="Shopee"
+                >
+
+                    <img
+                        src="img/shopee.svg"
+                        alt="Shopee"
+                        class="store-icon"
+                    >
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="physical-stores">
+
+        <h3>Lojas Físicas Parceiras</h3>
+
+
+        <div class="physical-store">
+
+            <strong>Fadiga | Bacural Discos</strong>
+
+            <p>
+                R. 7, 591 - Sl 2 - St. Central,
+                Goiânia - GO, 74023-020
+            </p>
+
+        </div>
+
+
+        <div class="physical-store">
+
+            <strong>American Music</strong>
+
+            <p>
+                Av. T-10, QD 110 - LT 7 - St. Bueno,
+                Goiânia - GO, 74223-060
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div id="lead-form" class="lead-form">
+
+        <iframe
+            src="https://tally.so/embed/PdN15Q?alignLeft=1&hideTitle=1&dynamicHeight=1"
+            loading="lazy"
+            width="100%"
+            height="447"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Entre em contato">
+        </iframe>
+
+    </div>
+
+
+    <div class="contact-list">
+
+
+        <div class="contact-item">
+
+            <img
+                src="img/whatsapp.svg"
+                alt="WhatsApp"
+                class="contact-icon"
+            >
+
+
+            <div class="contact-info">
+
+                <strong>WhatsApp</strong>
+
+                <a
+                    href="https://wa.me/5562991513022"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    62 9 9151-3022
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <img
+                src="img/email.svg"
+                alt="Email"
+                class="contact-icon"
+            >
+
+
+            <div class="contact-info">
+
+                <strong>Email</strong>
+
+                <a href="mailto:girolimpo@gmail.com">
+                    girolimpo@gmail.com
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="social-links">
+
+
+        <a href="https://www.youtube.com/@Giro_Limpo" target="_blank" rel="noopener">
+
+            <img
+                src="img/youtube.svg"
+                alt="YouTube"
+                class="social-icon"
+            >
+
+        </a>
+
+
+        <a href="https://www.instagram.com/girolimpo/" target="_blank" rel="noopener">
+
+            <img
+                src="img/instagram.svg"
+                alt="Instagram"
+                class="social-icon"
+            >
+
+        </a>
+
+
+        <a href="https://www.tiktok.com/@giro.limpo" target="_blank" rel="noopener">
+
+            <img
+                src="img/tiktok.svg"
+                alt="TikTok"
+                class="social-icon"
+            >
+
+        </a>
+
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+<footer class="site-footer">
+
+    <p>
+        © 2026 GIRO LIMPO. Todos os direitos reservados.
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="privacidade.html">Política de Privacidade</a>
+
+        <a href="cookies.html">Política de Cookies</a>
+
+        <a href="termos.html">Termos e Condições</a>
+
+        <a href="garantia.html">Garantia</a>
+
+        <span>Brasil</span>
+
+    </div>
+
+
+</footer>
+
+
+<script>
+
+    function copyPix() {
+
+        const pixKey = document.getElementById("pix-key").innerText;
+
+        navigator.clipboard.writeText(pixKey).then(function() {
+
+            const button = document.querySelector(".pix-copy button");
+
+            const originalText = button.innerText;
+
+            button.innerText = "Chave copiada!";
+
+            setTimeout(function() {
+
+                button.innerText = originalText;
+
+            }, 2000);
+
+        });
+
+    }
+
+</script>
+
+
+<a
+    href="https://wa.me/5562991513022"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="Falar com a Giro Limpo pelo WhatsApp"
+>
+
+    <img
+        src="img/whatsapp.svg"
+        alt="WhatsApp"
+    >
+
+</a>
+
 
 </body>
-</html>
 
+</html>
